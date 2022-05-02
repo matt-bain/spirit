@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Level1_Map.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Level2_Constructed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Level1_BG.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Level1_Constructed.gd" type="Script" id=5]
+
+[node name="Level1_Constructed" type="Node"]
+script = ExtResource( 5 )
+next_level_path = ExtResource( 3 )
+
+[node name="Background" parent="." instance=ExtResource( 4 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 136, 128 )
+
+[node name="Level1_Map" parent="." instance=ExtResource( 1 )]
+
+[connection signal="is_human" from="Player" to="Background" method="_on_Player_is_human"]
+[connection signal="is_human" from="Player" to="Level1_Map" method="_on_Player_is_human"]
+[connection signal="is_spirit" from="Player" to="Background" method="_on_Player_is_spirit"]
+[connection signal="is_spirit" from="Player" to="Level1_Map" method="_on_Player_is_spirit"]
+[connection signal="respawned" from="Player" to="." method="_on_Player_respawned"]
+[connection signal="fire_collect" from="Level1_Map" to="Player" method="_on_Level1_Map_fire_collect"]
+[connection signal="level_complete" from="Level1_Map" to="." method="_on_Level1_Map_level_complete"]
+[connection signal="message_to_player" from="Level1_Map" to="Player" method="message_to_player"]
+[connection signal="spirit_unlocked" from="Level1_Map" to="Player" method="_on_Level1_Map_spirit_unlocked"]

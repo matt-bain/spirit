@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://MessageToPlayer.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Exposition.gd" type="Script" id=2]
+[ext_resource path="res://Level1_Constructed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://BossName.tres" type="DynamicFont" id=4]
+
+[node name="Exposition" type="CanvasLayer"]
+script = ExtResource( 2 )
+level_1 = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+custom_fonts/font = ExtResource( 1 )
+text = "Your child has been stolen by dark spirits. You must venture through the dungeon in the hopes of finding your lost child.
+
+Best the puzzles, and slay the beasts to free your child."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 912.0
+margin_top = 664.0
+margin_right = 1241.0
+margin_bottom = 695.0
+custom_fonts/font = ExtResource( 4 )
+text = "Press 'e' to continue..."
+__meta__ = {
+"_edit_use_anchors_": false
+}

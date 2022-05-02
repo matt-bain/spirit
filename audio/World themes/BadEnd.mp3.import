@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BadEnd.mp3-0bb1877ddd5b3465aefec8f7ffeb4c12.mp3str"
+
+[deps]
+
+source_file="res://audio/World themes/BadEnd.mp3"
+dest_files=[ "res://.import/BadEnd.mp3-0bb1877ddd5b3465aefec8f7ffeb4c12.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

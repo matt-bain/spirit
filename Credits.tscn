@@ -1,0 +1,210 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://MessageToPlayer.tres" type="DynamicFont" id=1]
+[ext_resource path="res://BossName.tres" type="DynamicFont" id=2]
+[ext_resource path="res://CreditHeader.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Credits.gd" type="Script" id=4]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 16, 100 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "scroll"
+length = 40.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("RichTextLabel:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 20, 40 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 16, 100 ), Vector2( 16, -700 ), Vector2( 16, 100 ) ]
+}
+
+[node name="Credits" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+margin_bottom = -2.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 712.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -624.0
+margin_top = -260.0
+margin_right = 632.0
+margin_bottom = 1152.0
+rect_pivot_offset = Vector2( 1344, 756 )
+custom_fonts/bold_font = ExtResource( 3 )
+custom_fonts/normal_font = ExtResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][b]GRAPHICS[/b][/center]
+Level tiles - Rotting Pixels
+https://rottingpixels.itch.io/platformer-dungeon-tileset
+
+Enemy Assets - Broke One Pixel Studio
+https://broke-one-pixel-studio.itch.io/ogreghostskeletonandtauruspixelartsprites
+
+Title Screen and Sliding Puzzle Art - Lindsay MacLaren
+
+[center][b]MUSIC[/b][/center]
+Menu Music - Rise of Spirit by Alexandr Zhelanov
+https://opengameart.org/content/rise-of-spirit
+
+Level 1 - Cave Theme by Brandon75689
+https://opengameart.org/content/cave-theme
+
+Level 2 - Caves of Sorrow by Alexander Zhelanov
+https://opengameart.org/content/caves-of-sorrow
+
+Level 3 - Dark Shrine Loop by qubodup
+https://opengameart.org/content/dark-shrine-loop
+
+Good Ending - Gem Popper Piano Tune by Mopz
+https://opengameart.org/content/gem-popper-piano-tune
+
+Bad Ending - You Were My Brother by Matthew Pablo
+https://opengameart.org/content/you-were-my-brother-live-orchestra 
+
+[center][b]SOUNDS[/b][/center]
+RPG Sound Pack by artisticdude
+https://opengameart.org/content/rpg-sound-pack
+
+11 Male Human Pain/Death Sounds by Michel Baradari
+https://opengameart.org/content/11-male-human-paindeath-sounds
+
+RPG Sound Package by Reemax
+https://opengameart.org/content/rpg-sound-package
+
+Random SFX by Écrivain
+https://opengameart.org/content/random-sfx
+
+Breaking Rock by themightyglider
+https://opengameart.org/content/breaking-rock
+"
+text = "GRAPHICS
+Level tiles - Rotting Pixels
+https://rottingpixels.itch.io/platformer-dungeon-tileset
+
+Enemy Assets - Broke One Pixel Studio
+https://broke-one-pixel-studio.itch.io/ogreghostskeletonandtauruspixelartsprites
+
+Title Screen and Sliding Puzzle Art - Lindsay MacLaren
+
+MUSIC
+Menu Music - Rise of Spirit by Alexandr Zhelanov
+https://opengameart.org/content/rise-of-spirit
+
+Level 1 - Cave Theme by Brandon75689
+https://opengameart.org/content/cave-theme
+
+Level 2 - Caves of Sorrow by Alexander Zhelanov
+https://opengameart.org/content/caves-of-sorrow
+
+Level 3 - Dark Shrine Loop by qubodup
+https://opengameart.org/content/dark-shrine-loop
+
+Good Ending - Gem Popper Piano Tune by Mopz
+https://opengameart.org/content/gem-popper-piano-tune
+
+Bad Ending - You Were My Brother by Matthew Pablo
+https://opengameart.org/content/you-were-my-brother-live-orchestra 
+
+SOUNDS
+RPG Sound Pack by artisticdude
+https://opengameart.org/content/rpg-sound-pack
+
+11 Male Human Pain/Death Sounds by Michel Baradari
+https://opengameart.org/content/11-male-human-paindeath-sounds
+
+RPG Sound Package by Reemax
+https://opengameart.org/content/rpg-sound-package
+
+Random SFX by Écrivain
+https://opengameart.org/content/random-sfx
+
+Breaking Rock by themightyglider
+https://opengameart.org/content/breaking-rock
+"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 85.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -158.5
+margin_right = 158.5
+margin_bottom = 77.0
+custom_fonts/font = ExtResource( 1 )
+text = "CREDITS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 16.0
+margin_top = 8.0
+margin_right = 282.0
+margin_bottom = 85.0
+custom_colors/font_color_hover = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "<- back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+reset_on_save = false
+method_call_mode = 1
+anims/RESET = SubResource( 2 )
+anims/scroll = SubResource( 3 )
+
+[connection signal="pressed" from="BackButton" to="." method="_on_StartButton_pressed"]

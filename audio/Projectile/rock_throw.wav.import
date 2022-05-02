@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rock_throw.wav-8ccbc68cb57d4ce3d006977904d8139c.sample"
+
+[deps]
+
+source_file="res://audio/Projectile/rock_throw.wav"
+dest_files=[ "res://.import/rock_throw.wav-8ccbc68cb57d4ce3d006977904d8139c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

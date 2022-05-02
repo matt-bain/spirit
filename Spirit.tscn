@@ -1,0 +1,194 @@
+[gd_scene load_steps=39 format=2]
+
+[ext_resource path="res://sprites/player/spirit_idle.png" type="Texture" id=1]
+[ext_resource path="res://Spirit.gd" type="Script" id=2]
+[ext_resource path="res://sprites/player/spirit_death.png" type="Texture" id=3]
+[ext_resource path="res://sprites/player/spirit_attack_1.png" type="Texture" id=4]
+[ext_resource path="res://sprites/player/spirit_attack_2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/player/spirit_damage.png" type="Texture" id=6]
+[ext_resource path="res://sprites/help/m.png" type="Texture" id=7]
+[ext_resource path="res://sprites/help/n.png" type="Texture" id=8]
+[ext_resource path="res://audio/Projectile/fire.wav" type="AudioStream" id=9]
+[ext_resource path="res://audio/Projectile/rock_throw.wav" type="AudioStream" id=11]
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 5 )
+region = Rect2( 23, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 5 )
+region = Rect2( 46, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 6 )
+region = Rect2( 23, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 6 )
+region = Rect2( 46, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 6 )
+region = Rect2( 69, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 1 )
+region = Rect2( 23, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 1 )
+region = Rect2( 46, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 4 )
+region = Rect2( 69, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 4 )
+region = Rect2( 92, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 4 )
+region = Rect2( 115, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 3 )
+region = Rect2( 23, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 3 )
+region = Rect2( 46, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 3 )
+region = Rect2( 69, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 3 )
+region = Rect2( 92, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 3 )
+region = Rect2( 115, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 3 )
+region = Rect2( 138, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 3 )
+region = Rect2( 161, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 3 )
+region = Rect2( 184, 0, 23, 36 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 3 )
+region = Rect2( 207, 0, 23, 36 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 71 ), SubResource( 72 ) ],
+"loop": false,
+"name": "spirit_attack_2",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
+"loop": false,
+"name": "spirit_damage",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 57 ), SubResource( 58 ), SubResource( 57 ), SubResource( 59 ) ],
+"loop": true,
+"name": "spirit_idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 76 ), SubResource( 77 ), SubResource( 77 ), SubResource( 77 ), SubResource( 77 ), SubResource( 77 ), SubResource( 78 ) ],
+"loop": false,
+"name": "spirit_attack_1",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ) ],
+"loop": false,
+"name": "spirit_death",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 6, 15.5 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 13, 11 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 13, 11 )
+
+[sub_resource type="SpriteFrames" id=87]
+animations = [ {
+"frames": [ SubResource( 89 ) ],
+"loop": true,
+"name": "n",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 88 ) ],
+"loop": true,
+"name": "m",
+"speed": 5.0
+} ]
+
+[node name="Spirit" type="KinematicBody2D" groups=["player"]]
+collision_layer = 2
+collision_mask = 9
+script = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 11 )
+animation = "spirit_idle"
+frame = 3
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 2 )
+
+[node name="FirePoint" type="Position2D" parent="."]
+position = Vector2( 14, 2 )
+z_as_relative = false
+
+[node name="InteractHelp" type="AnimatedSprite" parent="."]
+position = Vector2( 17, -13 )
+frames = SubResource( 87 )
+animation = "n"
+
+[node name="Fire" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="Fire2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="RockThrow" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="RockThrow2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

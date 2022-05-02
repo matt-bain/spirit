@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://map/switch.png" type="Texture" id=1]
+[ext_resource path="res://Switch.gd" type="Script" id=2]
+[ext_resource path="res://audio/World/switch.wav" type="AudioStream" id=3]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "red",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "green",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 16, 12 )
+
+[node name="Switch" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="SwitchState" type="AnimatedSprite" parent="."]
+frames = SubResource( 3 )
+animation = "red"
+
+[node name="UseBox" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -4 )
+shape = SubResource( 4 )
+
+[node name="SwitchSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )

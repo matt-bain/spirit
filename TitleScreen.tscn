@@ -1,0 +1,223 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://MessageToPlayer.tres" type="DynamicFont" id=1]
+[ext_resource path="res://elements/title.png" type="Texture" id=2]
+[ext_resource path="res://TitleScreen.gd" type="Script" id=3]
+[ext_resource path="res://Exposition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://audio/World themes/menu music.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Credits.tscn" type="PackedScene" id=6]
+[ext_resource path="res://elements/sprit_load.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 768, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 1536, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 2304, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 3072, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 3840, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 4608, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 5376, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 6144, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 6912, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 7680, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=14]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 8448, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 9216, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 9984, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 10752, 0, 768, 960 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 11520, 0, 768, 960 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[node name="TitleScreen" type="Node2D"]
+script = ExtResource( 3 )
+startgame = ExtResource( 4 )
+credits = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 1080, 376 )
+scale = Vector2( 1.35742, 1.35742 )
+frames = SubResource( 19 )
+frame = 6
+playing = true
+flip_h = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 152, 376 )
+scale = Vector2( 1.35742, 1.35742 )
+frames = SubResource( 19 )
+frame = 5
+playing = true
+
+[node name="Control" type="Control" parent="."]
+margin_left = -8.0
+margin_right = 1272.0
+margin_bottom = 720.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="QuitButton" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = 170.5
+margin_right = 250.0
+margin_bottom = 247.5
+custom_colors/font_color_hover = Color( 0.301961, 0.301961, 0.301961, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 1 )
+custom_styles/focus = SubResource( 1 )
+custom_styles/disabled = SubResource( 1 )
+custom_styles/normal = SubResource( 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = 18.5
+margin_right = 250.0
+margin_bottom = 95.5
+custom_colors/font_color_hover = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = 90.5
+margin_right = 250.0
+margin_bottom = 167.5
+custom_colors/font_color_hover = Color( 0.490196, 0.490196, 0.490196, 1 )
+custom_fonts/font = ExtResource( 1 )
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Logo" type="TextureRect" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -248.0
+margin_top = 129.0
+margin_right = 252.0
+margin_bottom = 302.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control"]
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="pressed" from="Control/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Control/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="Control/Credits" to="." method="_on_Credits_pressed"]

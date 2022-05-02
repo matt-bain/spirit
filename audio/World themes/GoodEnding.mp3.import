@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/GoodEnding.mp3-5f2ba0e13e2543a0f9cfcf5d2140fefe.mp3str"
+
+[deps]
+
+source_file="res://audio/World themes/GoodEnding.mp3"
+dest_files=[ "res://.import/GoodEnding.mp3-5f2ba0e13e2543a0f9cfcf5d2140fefe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
